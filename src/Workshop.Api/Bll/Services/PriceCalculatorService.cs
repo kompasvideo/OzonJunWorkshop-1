@@ -39,7 +39,7 @@ public class PriceCalculatorService : IPriceCalculatorService
     private static double CalculatePriceByWeight(GoodModel[] goods, out double weight)
     {
         weight = goods.Sum(x => x.Weight);
-        return volumeRatio * weight;
+        return weightRatio * weight;
     }
     
     public CalculationLogModel[] QueryLog(int take)
